@@ -28,6 +28,9 @@ sootModel_LOGN::sootModel_LOGN(size_t            nsoot_,
     if (nsoot_ != 3)
         throw runtime_error("LOGN requires nsoot=3");
 
+    if ( !(tar->mechType == tarMech::NONE))
+        throw runtime_error("LOGN currently does not handle tar models");
+
     if ( !(coag->mechType == coagulationMech::FM        ||
            coag->mechType == coagulationMech::CONTINUUM ||
            coag->mechType == coagulationMech::HM) )
@@ -60,6 +63,9 @@ sootModel_LOGN::sootModel_LOGN(size_t          nsoot_,
 
     if (nsoot_ != 3)
         throw runtime_error("LOGN requires nsoot=3");
+    
+    if ( !(tar->mechType == tarMech::NONE))
+        throw runtime_error("LOGN currently does not handle tar models");
 
     if ( !(coag->mechType == coagulationMech::FM        ||
            coag->mechType == coagulationMech::CONTINUUM ||

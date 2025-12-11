@@ -33,6 +33,9 @@ sootModel_QMOM::sootModel_QMOM(size_t            nsoot_,
 
     if (nsoot_%2 == 1 || nsoot_ < 1)
         throw runtime_error("Invalid number of soot moments requested: must be even number");
+    
+    if ( !(tar->mechType == tarMech::NONE))
+        throw runtime_error("QMOM currently does not handle tar models");
 
     if (nsoot_ > 6)
         cerr << "Warning: QMOM inversion algorithm may behave unpredictably with "
@@ -67,6 +70,9 @@ sootModel_QMOM::sootModel_QMOM(size_t          nsoot_,
     if (nsoot_%2 == 1 || nsoot_ < 1)
         throw runtime_error("Invalid number of soot moments requested: must be even number");
 
+    if ( !(tar->mechType == tarMech::NONE))
+        throw runtime_error("QMOM currently does not handle tar models");
+    
     if (nsoot_ > 6)
         cerr << "Warning: QMOM inversion algorithm may behave unpredictably with "
                 "8+ soot moments. Proceed with caution." << endl;

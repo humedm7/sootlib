@@ -33,6 +33,9 @@ sootModel_SECT::sootModel_SECT(size_t            nsoot_,
     if (nsoot_ < 2)
         throw runtime_error("SECT requires nsoot>1");
 
+    if ( !(tar->mechType == tarMech::NONE))
+        throw runtime_error("SECT currently does not handle tar models");
+    
     set_mBins(cMin_);
 
     psdMechType = psdMech::SECT;
@@ -71,6 +74,9 @@ sootModel_SECT::sootModel_SECT(size_t          nsoot_,
     if (nsoot_ < 2)
         throw runtime_error("SECT requires nsoot>1");
 
+    if ( !(tar->mechType == tarMech::NONE))
+        throw runtime_error("SECT currently does not handle tar models");
+    
     set_mBins(cMin_);
 
     psdMechType = psdMech::SECT;

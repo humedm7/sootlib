@@ -30,6 +30,9 @@ sootModel_MOMIC::sootModel_MOMIC(size_t            nsoot_,
     if (nsoot_ < 3 || nsoot_ > 8)
         throw runtime_error("MOMIC requires 3-8 moments");
 
+    if ( !(tar->mechType == tarMech::NONE))
+        throw runtime_error("MOMIC currently does not handle tar models");
+    
     if ( !(coag->mechType == coagulationMech::FM        ||
            coag->mechType == coagulationMech::CONTINUUM ||
            coag->mechType == coagulationMech::HM) )
@@ -75,6 +78,9 @@ sootModel_MOMIC::sootModel_MOMIC(size_t          nsoot_,
     if (nsoot_ < 3 || nsoot_ > 8)
         throw runtime_error("MOMIC requires 3-8 moments");
 
+    if ( !(tar->mechType == tarMech::NONE))
+        throw runtime_error("MOMIC currently does not handle tar models");
+    
     if ( !(coag->mechType == coagulationMech::FM        ||
            coag->mechType == coagulationMech::CONTINUUM ||
            coag->mechType == coagulationMech::HM) )
