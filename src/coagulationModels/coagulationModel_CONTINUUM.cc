@@ -23,7 +23,7 @@ double coagulationModel_CONTINUUM::getCoagulationSootRate(const state& state,
     if (m1 <= mmin || m2 <= mmin) return 0.0;
 
     double d1 = pow(6.*m1/(M_PI*rhoSoot), onethird);
-    double d2 = pow(6.*m1/(M_PI*rhoSoot), onethird);
+    double d2 = pow(6.*m2/(M_PI*rhoSoot), onethird);
     double ds = d1 + d2;
 
     double mfp = state.getGasMeanFreePath();
