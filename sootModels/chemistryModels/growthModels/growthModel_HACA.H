@@ -1,0 +1,29 @@
+#pragma once
+
+#include "growthModel.H"
+#include "state.H"
+
+namespace soot {
+
+//////////////////////////////////////////////////////////////////////////////////
+///
+/// HACA growth model
+///
+//////////////////////////////////////////////////////////////////////////////////
+
+class growthModel_HACA : public growthModel {
+
+//////////////// DATA MEMBERS /////////////////////
+
+public:
+
+//////////////// MEMBER FUNCTIONS ////////////////
+
+    double getGrowthSootRate(const state& state) const override;
+
+//////////////// CONSTRUCTOR FUNCTIONS ////////////
+
+    growthModel_HACA();
+    ~growthModel_HACA() override = default;
+};
+} // namespace soot

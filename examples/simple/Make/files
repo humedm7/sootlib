@@ -1,0 +1,3 @@
+simple_example.C
+
+EXE = simple_example.x

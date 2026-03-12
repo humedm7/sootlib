@@ -1,0 +1,52 @@
+/* Source files for sootlib */
+sootModels/state.C
+sootModels/sootModel.C
+sootModels/sootModel_MONO.C
+sootModels/sootModel_LOGN.C
+sootModels/sootModel_QMOM.C
+sootModels/sootModel_MOMIC.C
+sootModels/sootModel_SECT.C
+
+/* Nucleation models */
+chemistryModels/nucleationModels/nucleationModel.C
+chemistryModels/nucleationModels/nucleationModel_LL.C
+chemistryModels/nucleationModels/nucleationModel_LIN.C
+chemistryModels/nucleationModels/nucleationModel_LINA1.C
+chemistryModels/nucleationModels/nucleationModel_PAH.C
+chemistryModels/nucleationModels/nucleationModel_MB.C
+chemistryModels/nucleationModels/nucleationModel_FAIR.C
+chemistryModels/nucleationModels/nucleationModel_AJ_RED.C
+chemistryModels/nucleationModels/nucleationModel_BROWN.C
+
+/* Growth models */
+chemistryModels/growthModels/growthModel.C
+chemistryModels/growthModels/growthModel_LL.C
+chemistryModels/growthModels/growthModel_LIN.C
+chemistryModels/growthModels/growthModel_HACA.C
+chemistryModels/growthModels/growthModel_MB.C
+chemistryModels/growthModels/growthModel_FAIR.C
+
+/* Oxidation models */
+chemistryModels/oxidationModels/oxidationModel.C
+chemistryModels/oxidationModels/oxidationModel_LL.C
+chemistryModels/oxidationModels/oxidationModel_LEE_NEOH.C
+chemistryModels/oxidationModels/oxidationModel_NSC_NEOH.C
+chemistryModels/oxidationModels/oxidationModel_HACA.C
+chemistryModels/oxidationModels/oxidationModel_OPTJ.C
+chemistryModels/oxidationModels/oxidationModel_OPTG.C
+chemistryModels/oxidationModels/oxidationModel_MB.C
+chemistryModels/oxidationModels/oxidationModel_FAIR.C
+chemistryModels/oxidationModels/oxidationModel_AJ_RED.C
+chemistryModels/oxidationModels/oxidationModel_BROWN.C
+
+/* Coagulation models */
+chemistryModels/coagulationModels/coagulationModel_CONTINUUM.C
+chemistryModels/coagulationModels/coagulationModel_FM.C
+chemistryModels/coagulationModels/coagulationModel_HM.C
+chemistryModels/coagulationModels/coagulationModel_FUCHS.C
+
+/* Tar models */
+chemistryModels/tarModels/tarModel_AJ_RED.C
+chemistryModels/tarModels/tarModel_BROWN.C
+
+LIB = $(FOAM_USER_LIBBIN)/libsootlib
