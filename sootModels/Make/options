@@ -1,5 +1,0 @@
-/* Minimal options file for standalone sootlib */
-EXE_INC = \
-    -IlnInclude
-
-LIB_LIBS = 

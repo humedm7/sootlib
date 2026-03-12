@@ -1,0 +1,4 @@
+SOURCE = \
+simple_example.C \
+
+# sources
